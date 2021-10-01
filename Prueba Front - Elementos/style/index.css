@@ -1,0 +1,314 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+
+:root {
+    --color-black: #000000;
+    --color-secundary: #75DED7;
+    --color-white: #FFFFFf;
+    --font-body: barlow ligth;
+    --font-title: garamond-gara;
+}
+
+@font-face {
+    font-family: garamond-gara;
+    src: url("../Tipografías/Garamond/GARA.TTF");
+    font-family: barlow ligth;
+    src: url("../Tipografías/Barlow/BARLOW-LIGHT.TTF");
+}
+
+
+/* .logoLink {
+    height: 90%;
+    background-image: url("./assets/logo2.png");
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin: 0 auto;
+} */
+
+.nav-menu-nav {
+    display: flex;
+    align-items: center;
+    /* margin-right: 3rem; */
+    height: 100%;
+    list-style: none;
+}
+
+.nav-menu-nav a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: 18px;
+    margin-left: 5vw;
+}
+
+.nav-menu-item {
+    font-size: .8rem;
+    margin: 0 .6rem;
+    text-transform: uppercase;
+    width: max-content;
+}
+
+.nav-toggle {
+    color: white;
+    background: none;
+    border: none;
+    font-size: 30px;
+    padding: 0 20px;
+    line-height: 60px;
+    display: none;
+}
+
+
+/* NAV */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    height: 18vh;
+    background-color: var(--color-black);
+    padding: 0 5vw 0 5vw;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+nav img {
+    max-width: 15vw;
+}
+
+p {
+    font-family: var(--font-body);
+    font-size: 18px;
+}
+
+
+/* MAIN */
+
+main {
+    margin-top: 18vh;
+}
+
+.phrase {
+    background-image: url('./Imágenes/SLIDER.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    font-family: var(--font-body);
+}
+
+.phrase h2,
+h3 {
+    font-size: 36px;
+}
+
+.text {
+    background-color: var(--color-white);
+    min-height: 75vh;
+    display: flex;
+}
+
+.text div:first-child {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text div:nth-child(2) {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 5vw;
+}
+
+.text h1 {
+    font-family: var(--font-title);
+}
+
+.iconSilla {
+    background-image: url('./Imágenes/ICONO_Sillon.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 40vh;
+}
+
+.phrase2 {
+    background-image: url('./Imágenes/BANNER_Sillon.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--color-white);
+    font-family: var(--font-body);
+}
+
+.btn_more {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 20vh;
+}
+
+.imgs {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    min-height: 80vh;
+}
+
+.imgs h3 {
+    font-family: var(--font-title);
+}
+
+.imgs div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imgs img {
+    max-width: 20vw;
+}
+
+.contact {
+    background-color: var(--color-black);
+    min-height: 75vh;
+    color: var(--color-white);
+    display: flex;
+    justify-content: space-around;
+    padding: 9vh 0 0 0;
+}
+
+.btn1 {
+    color: var(--color-white);
+    background-color: var(--color-secundary);
+    border: none;
+    font-size: 18px;
+    min-width: 10vw;
+}
+
+
+/* FORM */
+
+.contact form section {
+    display: flex;
+    flex-direction: row;
+}
+
+.contact input,
+select,
+option {
+    max-width: 15vw;
+    background-color: var(--color-black);
+    border: none;
+    border-bottom: 1px solid var(--color-secundary);
+    color: var(--color-white);
+}
+
+.contact label {
+    margin-top: 2vh;
+}
+
+.contact h2 {
+    font-family: var(--font-title);
+}
+
+.fab {
+    color: var(--color-secundary);
+}
+
+.fas {
+    color: var(--color-secundary);
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: var(--color-secundary);
+    min-height: 15vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-white);
+    font-family: var(--font-body);
+}
+
+@media (max-width: 770px) {
+    /* NAV */
+    .nav-menu-nav {
+        flex-direction: column;
+        position: fixed;
+        background-color: var(--color-black);
+        width: 100vw;
+        top: 18vh;
+        align-items: center;
+        height: cal(100vh- 18vh);
+        overflow-y: auto;
+        left: 100%;
+        transition: left 0.3s;
+        z-index: 1;
+    }
+    .nav-toggle {
+        display: block;
+    }
+    .nav-menu_visible {
+        left: 0;
+    }
+    .nav-menu-nav a {
+        font-size: 34px;
+    }
+    .imgs {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 5vh;
+    }
+    .imgs img {
+        max-width: 55vw;
+    }
+    .text div:first-child {
+        display: none;
+    }
+    .text div:nth-child(2) {
+        width: 100%;
+        align-items: center;
+        padding: 0 5vw 0 5vw;
+    }
+    .contact {
+        flex-direction: column;
+        padding: 5vw;
+        /* align-items: center; */
+    }
+    .contact input,
+    select {
+        max-width: 35vw;
+    }
+    .contact div:nth-child(2) {
+        display: flex;
+        flex-direction: row;
+    }
+    .contact div:nth-child(3) {
+        display: flex;
+        flex-direction: row;
+    }
+    .contact div:nth-child(2) div,
+    div:nth-child(3) div {
+        margin-left: 15vw;
+    }
+}

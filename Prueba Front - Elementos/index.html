@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="./style/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+
+<body>
+    <div id="app" class="wrapper">
+        <header>
+            <nav>
+                <div class="d-flex align-items-center">
+                    <img src="./style/Imágenes/LOGO.png" alt="">
+                </div>
+                <button class="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu-nav .nav-menu_visible">
+                    <li>
+                        <a href="#" class="nav-menu-link">INICIO</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-menu-link">PRODUCTOS</a>
+                    </li>
+                    <li>
+                        <a href="#" class="nav-menu-link">CONTACTOS</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section class="phrase">
+                <h3>MARCA TU</h3>
+                <h1>ESTILO PROPIO</h1>
+            </section>
+            <section class="text">
+                <div>
+                    <div class="iconSilla"></div>
+                </div>
+                <div>
+                    <h1 class="pb-4">Nosotros</h3>
+                        <p>Nos dedicamos al diseño y restauración de muebles a pedido y a tu gusto, para que sean únicos, irrepetibles y funcionales. Nuestros diseños nacen de la imaginación y la pasión que sentimos al crearlos. Buscamos generar piezas únicas
+                            en tu espacio, priorizando sobre todo el confort. Trabajamos muebles con espejos, con pintura glitter y con resina epóxica.
+                        </p>
+                </div>
+            </section>
+            <section class="phrase2">
+                <h1>NOVEDOSOS Y BRILLANTES</h1>
+            </section>
+            <section>
+                <div class="imgs">
+                    <div>
+                        <img src="./style/Imágenes/IMG_Cómoda.png" alt="">
+                        <h3>Comoda</h3>
+                        <p>Dormitorio</p>
+                    </div>
+                    <div>
+                        <img src="./style/Imágenes/IMG_Sillon.png" alt="">
+                        <h3>Silla</h3>
+                        <p>Cocina</p>
+                    </div>
+                    <div>
+                        <img src="./style/Imágenes/IMG_MesaRatona.png" alt="">
+                        <h3>Mesa ratona</h3>
+                        <p>Living/Comedor</p>
+                    </div>
+                </div>
+                <div class="btn_more">
+                    <button class="btn1">VER MAS</button>
+                </div>
+            </section>
+            <section class="contact">
+                <div class="mb-5">
+                    <h2 class="mb-5">Formulario</h2>
+                    <form action="">
+                        <section>
+                            <div class="d-flex flex-column">
+                                <label for="name">Nombre</label>
+                                <input v-model="name" type="text" name="name" id="name">
+                                <label for="email">E-mail</label>
+                                <input v-model="email" type="email" name="email" id="email">
+                                <label for="phone">Télefono</label>
+                                <input v-model="phone" type="number" name="phone" id="phone">
+                            </div>
+                            <div class="d-flex flex-column ms-5">
+                                <label for="city">Provincia</label>
+                                <select v-model="city" name="city" id="city">
+                                    <option value=""></option>
+                                    <option value="">Capital Federal</option>
+                                    <option value="">Buenos Aires</option>
+                                    <option value="">Cordoba</option>
+                                    <option value="">Entre Rios</option>
+                                </select>
+                                <label for="hours">Hoarario de contacto</label>
+                                <select v-model="hours" name="hours" id="hours">
+                                    <option value=""></option>
+                                    <option value="">10:00 - 12:00</option>
+                                    <option value="">13:00 - 18:00</option>
+                                </select>
+                                <label for="query">Consulta</label>
+                                <input v-model="query" type="text" name="query" id="query">
+                            </div>
+                        </section>
+                        <section class="d-flex justify-content-end mt-3">
+                            <button @click="send" type="button" class="btn1">Enviar</button>
+                        </section>
+                    </form>
+                </div>
+                <div>
+                    <h2 class="mb-5">Contacto</h2>
+                    <div class="d-flex flex-column">
+                        <span class="d-flex">
+                            <i class="fas fa-phone"></i>
+                            <p class="ms-2">0800 2345 2334</p>
+                        </span>
+                        <span class="d-flex">
+                            <i class="fab fa-whatsapp"></i>
+                            <p class="ms-2">11-2343-2343</p>
+                        </span>
+                        <span class="d-flex">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p class="ms-2">Primera Junta 2837</p>
+                        </span>
+                    </div>
+                </div>
+                <div>
+                    <h2 class="mb-5">Horarios</h2>
+                    <div class="d-flex flex-column">
+                        <p>Lunes a Viernes</p>
+                        <p>10:00 - 19:00 hs.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Todos los derechos reservados</p>
+        </footer>
+    </div>
+
+    <!-- Alert -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <!-- Axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- VueJS -->
+    <script src="https://unpkg.com/vue@next"></script>
+    <!-- font awasone -->
+    <script src="https://kit.fontawesome.com/458663e2df.js" crossorigin="anonymous"></script>
+    <!-- Js -->
+    <script src="./Js/index.js"></script>
+    <!-- bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+</body>
+
+</html>
